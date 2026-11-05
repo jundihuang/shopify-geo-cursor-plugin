@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="beankit">
+  <title>beankit</title>
+  <rect width="192" height="192" rx="40" fill="#0F766E"/>
+  <circle cx="96" cy="78" r="36" fill="#ECFDF5"/>
+  <ellipse cx="96" cy="78" rx="10" ry="28" fill="#0F766E"/>
+  <path d="M68 78c0-15 12-28 28-28" fill="none" stroke="#99F6E4" stroke-width="6" stroke-linecap="round"/>
+  <text x="96" y="148" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#ECFDF5">beankit</text>
+</svg>

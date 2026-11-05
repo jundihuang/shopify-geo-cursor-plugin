@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "shopify-geo": {
+      "url": "https://kit.beansmile.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${BEANKIT_API_KEY}"
+      }
+    }
+  }
+}

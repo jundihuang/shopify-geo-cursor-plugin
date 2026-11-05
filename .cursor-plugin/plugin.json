@@ -1,0 +1,23 @@
+{
+  "name": "shopify-geo",
+  "displayName": "Shopify GEO",
+  "version": "0.1.0",
+  "description": "Score a Shopify store for GEO (generative-engine readiness). Install this GEO connector, then your Bot guides signup and scoring — sellers never need a terminal.",
+  "author": { "name": "Beansmile", "email": "noreply@beansmile.com" },
+  "homepage": "https://kit.beansmile.com",
+  "license": "MIT",
+  "keywords": ["shopify", "geo", "ecommerce", "mcp", "generative-engine"],
+  "logo": "assets/logo.svg",
+  "category": "integrations",
+  "mcpServers": "./mcp.json",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "BEANKIT_API_KEY": {
+        "type": "string",
+        "title": "API key",
+        "description": "Optional at install. After install, ask your Bot to finish signup; then Configure this plugin with the key it gives you (bk_live_…)."
+      }
+    }
+  }
+}
