@@ -16,7 +16,7 @@ description: >-
 3. **Bind key** — `bk_live_…` goes into plugin Configure / InstallPlugin values (seller does not paste into a terminal).
 4. **Usage guide** — send store URL, wait 1–2 minutes, say 「重新接上」 if access breaks.
 
-Base URL: `https://kit.beansmile.com` (ops only; do not brand this to sellers unless they ask where accounts live).
+Base URL: `https://bots.beansmile.ai` (ops only; do not brand this to sellers unless they ask where accounts live).
 
 Do **not** teach curl/Terminal as the primary path. Do **not** echo full secrets, passwords, JWTs, or `bk_live_…` values in chat (at most a short prefix when confirming success).
 
@@ -39,21 +39,21 @@ Never tell the seller they must “install beankit” or learn an internal produ
 
 1. Collect **email** in chat.
 2. Collect **password** only via a secret-request / secure form that lands in `process.env.BEANKIT_SELLER_PASSWORD` (or the platform equivalent). Never ask them to paste the password into plain chat if a secret widget exists; never print it.
-3. `POST https://kit.beansmile.com/auth/register` with email + password (from env).
+3. `POST https://bots.beansmile.ai/auth/register` with email + password (from env).
 4. Tell them to open the verification email. Wait for 「已验证」 / "verified", or accept a pasted verify URL when the API allows.
-5. `POST https://kit.beansmile.com/auth/login` → keep JWT only in env; never show it.
+5. `POST https://bots.beansmile.ai/auth/login` → keep JWT only in env; never show it.
 
 ### 3. Create app + mint secret
 
-1. `POST https://kit.beansmile.com/apps` with `bot_type`: `shopify_geo_eval` (default). Reuse an existing app of that type if one already exists.
-2. `POST https://kit.beansmile.com/apps/{slug}/secrets` → receive `bk_live_…`. Keep it in env only.
+1. `POST https://bots.beansmile.ai/apps` with `bot_type`: `shopify_geo_eval` (default). Reuse an existing app of that type if one already exists.
+2. `POST https://bots.beansmile.ai/apps/{slug}/secrets` → receive `bk_live_…`. Keep it in env only.
 
 ### 4. Bind key into the plugin (no terminal)
 
 Prefer, in order:
 
 1. **Plugins → Configure** (or Bot `InstallPlugin` / configure with `values.BEANKIT_API_KEY`) so `${BEANKIT_API_KEY}` substitutes into `mcp.json`.
-2. If Configure is unavailable, `AddMcpServer` name `shopify-geo`, url `https://kit.beansmile.com/mcp`, header `Authorization: Bearer <key from env>`.
+2. If Configure is unavailable, `AddMcpServer` name `shopify-geo`, url `https://bots.beansmile.ai/mcp`, header `Authorization: Bearer <key from env>`.
 
 Ask before writing the connector. After bind, confirm tools are reachable without dumping the key.
 

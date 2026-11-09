@@ -37,12 +37,12 @@ Do **not** require sellers to say middleware brand names.
 
 ## For marketplace reviewers / 审核说明
 
-1. Register at https://kit.beansmile.com (email verify required).
+1. Register at https://bots.beansmile.ai (email verify required).
 2. Create an application with bot type `shopify_geo_eval`.
 3. Mint an API secret (`bk_live_…`).
 4. Configure this plugin’s API key, then ask the agent to score a public Shopify storefront URL.
 
-Contact: Beansmile — https://kit.beansmile.com
+Contact: Beansmile — https://bots.beansmile.ai
 
 ## License
 
